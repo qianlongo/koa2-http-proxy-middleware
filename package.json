@@ -1,0 +1,37 @@
+{
+  "name": "koa2-http-proxy-middleware",
+  "version": "1.0.0",
+  "description": "koa2 http proxy middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV='dev' nodemon ./test/app.js",
+    "lint": "standard",
+    "lint-fix": "standard --fix",
+    "validate": "npm ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qianlongo/koa2-http-proxy-middleware.git"
+  },
+  "keywords": [],
+  "author": "qianlongo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qianlongo/koa2-http-proxy-middleware/issues"
+  },
+  "homepage": "https://github.com/qianlongo/koa2-http-proxy-middleware#readme",
+  "devDependencies": {
+    "koa": "^2.4.1",
+    "koa-compose": "^4.0.0",
+    "koa-router": "^7.3.0",
+    "nodemon": "^1.14.8",
+    "precommit-hook": "^3.0.0",
+    "standard": "^10.0.3"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "http-proxy-middleware": "^0.17.4"
+  }
+}
