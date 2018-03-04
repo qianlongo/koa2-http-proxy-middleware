@@ -22,6 +22,7 @@
   "homepage": "https://github.com/qianlongo/koa2-http-proxy-middleware#readme",
   "devDependencies": {
     "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
     "koa-compose": "^4.0.0",
     "koa-router": "^7.3.0",
     "nodemon": "^1.14.8",

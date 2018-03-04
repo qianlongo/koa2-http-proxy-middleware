@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 axios({
-  url: 'http://card.meituan.com/apply/personalInfo'
+  url: 'https://www.baidu.com/'
 })
   .then((res) => {
     console.log(res.data)

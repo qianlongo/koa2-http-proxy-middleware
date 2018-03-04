@@ -1,12 +1,12 @@
 const koaCompose = require('koa-compose')
 const {
-  cardDetail
+  pages
 } = require('./controller')
 
 module.exports = (Router) => {
   const router = new Router()
 
-  router.get('/apply/cardDetail', cardDetail)
+  router.all('/*', pages)
 
   return koaCompose([router.routes(), router.allowedMethods()])
 }
