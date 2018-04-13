@@ -1,17 +1,42 @@
 ## koa2-http-proxy-middleware
-koa2 http proxy middleware
-## 用法TODO
 
-1. 转发请求
+> koa2请求转发中间件
+
+## 用法
+
+**初始化中间件**
 
 ``` javascript
-// 初始化中间件,可以决定proxy到后端的host等
+const Koa = require('koa')
+const app = new Koa()
+const PORT = 3000
+const koaBodyparser = require('koa-bodyparser')
 
+// 因中间件中需要解析body中的参数，故先添加该中间件
+app.use(koaBodyparser())
+// apiHost即是你要转发请求到后端的host，其他的参数可以参考axioshttps://github.com/axios/axios
+app.use(httpProxy({
+  apiHost: 'xxx.yyy.com'
+}))
 
-let content = ctx.proxy()
-// 拿到content进行其他的操作
+app.listen(PORT, () => {
+  console.log(`app start at: ${PORT}`)
+})
+```
+
+**转发请求**
+
+在你的路由controller中使用如下方法转发请求
+
+``` javascript
+
+async pages (ctx, next) {
+  // 这里可以做一些请求之前需要处理的事情
+  const data = await ctx.httpProxy()
+  // 这里可以做一些请求之后需要处理的事情
+  ctx.body = data
+}
 
 
 ```
 
-2. 独立发送请求
