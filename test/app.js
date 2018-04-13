@@ -8,7 +8,7 @@ const PORT = 3000
 
 app.use(koaBodyparser())
 app.use(httpProxy({
-  apiHost: '//card.fin.test.meituan.com'
+  apiHost: 'card.fin.test.meituan.com'
 }))
 app.use(routes(KoaRouter))
 app.listen(PORT, () => {
