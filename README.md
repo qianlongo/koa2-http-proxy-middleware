@@ -11,6 +11,7 @@ const Koa = require('koa')
 const app = new Koa()
 const PORT = 3000
 const koaBodyparser = require('koa-bodyparser')
+const httpProxy = require('koa2-http-proxy-middleware')
 
 // 因中间件中需要解析body中的参数，故先添加该中间件
 app.use(koaBodyparser())
