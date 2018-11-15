@@ -22,9 +22,11 @@
   "homepage": "https://github.com/qianlongo/koa2-http-proxy-middleware#readme",
   "devDependencies": {
     "koa": "^2.4.1",
+    "koa-better-http-proxy": "^0.2.4",
     "koa-bodyparser": "^4.2.0",
     "koa-compose": "^4.0.0",
     "koa-router": "^7.3.0",
+    "koa-server-http-proxy": "^0.1.0",
     "nodemon": "^1.14.8",
     "precommit-hook": "^3.0.0",
     "standard": "^10.0.3"
@@ -34,5 +36,9 @@
   ],
   "dependencies": {
     "axios": "^0.18.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }
